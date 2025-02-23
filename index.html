@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="./style.css">
     <!-- UIkit CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.16.27/dist/css/uikit.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 
 </head>
 
@@ -28,107 +29,47 @@
 
         </div>
 
-
-        <section class="uk-section uk-padding-remove-bottom  uk-container   ">
-            <div class=" uk-width-auto" uk-grid>
-                <div class="  uk-flex uk-flex-middle   uk-width-1-1 uk-width-1-2@s " >
+        <section class="uk-section uk-padding-remove-bottom uk-container">
+            <div class="uk-width-auto" uk-grid>
+                <div class="uk-flex uk-flex-middle uk-width-1-1 uk-width-1-2@s">
                     <div>
-                        <!-- <h1 class="uk-heading-medium uk-margin-remove-bottom">Ac mattis
-                            <span class="text-purple">senectus</span> erat pharetra
-                        </h1>
-                        <p class="uk-text-large uk-margin-top">Dictum aliquam porta in condimentum ac integer
-                            <br class="uk-visible@m uk-hidden@l">turpis pulvinar, est scelerisque ligula sem
-                        </p> -->
-
-
-                        <h1>Empower Your Store with Smart Apps to <br><span class=" text-purple typing"></span></h1>
+                        <h1>Empower Your Store with Smart Apps to <br><span class="text-purple typing"></span></h1>
                         <p>Boost sales, streamline management, and enhance<br> customer experience effortlessly!</p>
-
+        
                         <div class="uk-margin-top">
                             <a href="#" class="uk-button uk-button-primary">Explore Our Apps</a>
-                            <!-- <a href="#" class="uk-button uk-button-default">Malesuada</a> -->
                         </div>
                     </div>
                 </div>
-                <div class="   ">
-                    <img width="500px" src="https://mambaui.com/assets/svg/Business_SVG.svg" alt="" class=" ">
+                <div>
+                    <img width="500px" src="https://mambaui.com/assets/svg/Business_SVG.svg" alt="">
                 </div>
             </div>
-            <script>
-                const textArray = [
-                    "increase conversions.",
-                    "simplify operations.",
-                    "grow your business.",
-                    "enhance engagement."
-                ];
-
-                let textIndex = 0;
-                let charIndex = 0;
-                const typingSpeed = 100;
-                const erasingSpeed = 50;
-                const delayBetweenTexts = 1500;
-
-                const typingElement = document.querySelector(".typing");
-
-                function typeText() {
-                    if (charIndex < textArray[textIndex].length) {
-                        typingElement.textContent += textArray[textIndex].charAt(charIndex);
-                        charIndex++;
-                        setTimeout(typeText, typingSpeed);
-                    } else {
-                        setTimeout(eraseText, delayBetweenTexts);
-                    }
-                }
-
-                function eraseText() {
-                    if (charIndex > 0) {
-                        typingElement.textContent = textArray[textIndex].substring(0, charIndex - 1);
-                        charIndex--;
-                        setTimeout(eraseText, erasingSpeed);
-                    } else {
-                        textIndex = (textIndex + 1) % textArray.length;
-                        setTimeout(typeText, typingSpeed);
-                    }
-                }
-
-                document.addEventListener("DOMContentLoaded", () => {
-                    setTimeout(typeText, 500);
-                });
-            </script>
-
         </section>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        
         <!-- Include Typed.js -->
         <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-
         <script>
             document.addEventListener("DOMContentLoaded", function () {
-                new Typed(".dynamic-effect", {
-                    strings: ["Build Shopify stores.", "Develop Shopify apps.", "Optimize your e-commerce experience."],
-                    typeSpeed: 50,         // Typing speed
-                    backSpeed: 25,         // Backspacing speed
-                    backDelay: 1000,       // Delay before backspacing
-                    startDelay: 500,       // Delay before starting
-                    loop: true,            // Loop the animation
-                    showCursor: false,      // Show blinking cursor
-
+                new Typed(".typing", {
+                    strings: [
+                        "increase conversions.",
+                        "simplify operations.",
+                        "grow your business.",
+                        "enhance engagement."
+                    ],
+                    typeSpeed: 100,
+                    backSpeed: 50,
+                    backDelay: 1500,
+                    loop: true,
+                    showCursor: true // Hides the blinking cursor
                 });
             });
         </script>
+        
 
+
+ 
 
 
 
@@ -182,7 +123,7 @@
             <style>
                 .infobox-section {
                     text-align: center;
-                    padding: 40px 20px;
+                    /* padding: 40px 20px; */
                 }
 
                 .infobox-section h1 {
@@ -428,7 +369,7 @@
         <div style=" 
          background-color: #743089">
             <footer class=" uk-container   " style="    padding: 18px 0px;">
-                <div class="uk-container uk-flex uk-flex-wrap uk-flex-center uk-flex-between" uk-grid>
+                <div class="uk-container uk-flex uk-flex-wrap uk-flex-center uk-flex-between uk-visible@s" uk-grid>
                     <div class="uk-flex uk-flex-middle">
                          
                         <ul class="uk-subnav uk-margin-remove uk-subnav-divider">
@@ -442,6 +383,19 @@
                         <li><a class="text-light" href="https://www.facebook.com/">Facebook</a></li>
                         <li><a class="text-light" href="https://www.linkedin.com/">LinkedIn</a></li>
                     </ul>
+                </div>
+                <div class="uk-hidden@s uk-text-center">
+                      
+                    <div   class="uk-flex uk-flex-center"   >
+                        <p class="uk-margin-remove" ><a class="text-light" href="#terms-modal" uk-toggle>Terms of Use</a>  <span style="color: #fff !important;margin-right:10px;" >|</span> </p>
+                        <p class="uk-margin-remove" ><a class="text-light" href="#privacy-modal" uk-toggle>Privacy</a></p>
+                    </div>
+                    <div style="margin-top: 8px;" ><p class="uk-margin-remove"  style="color:#fff;" >@copyright 2025  <a style="color:#fff;"   href="carryup.in" target="_blank" >  carryup</a></p></div>
+                    <div class="uk-flex uk-flex-center" style="margin-top: 8px;" >
+                        <p class="uk-margin-remove" ><a class="text-light" href="https://www.instagram.com/">Instagram</a>   <span style="color: #fff !important;margin-right:10px;" >|</span> </p>
+                        <p class="uk-margin-remove" ><a class="text-light" href="https://www.facebook.com/">Facebook</a> <span style="color: #fff !important;margin-right:10px;" >|</span> </p>
+                        <p class="uk-margin-remove" ><a class="text-light" href="https://www.linkedin.com/">LinkedIn</a></p>
+                    </div>
                 </div>
             </footer>
         </div>
